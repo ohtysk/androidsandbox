@@ -3,6 +3,7 @@ package com.gmail.ohtysk.helloworld;
 import com.gmail.ohtysk.helloworld.R.id;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -21,6 +22,9 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Log.d("Main", "onClick");
+				Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+				intent.setAction(Intent.ACTION_VIEW);
+				startActivity(intent);
 			}
 		});
 	}
